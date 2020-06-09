@@ -1,42 +1,16 @@
-/*The purpose of this webpage is to implement Flex Box instead of the original code "Float Method" (commented and shown below) that I did for this assignment. I also cleaned up extraneous code that had resulted from copying the CSS for my About page. I also removed some of the horse pictures because to look good they needed to be resized and my purpose today is to learn how to implement Flex Box before moving on to reviewing Java Script and I don't want to take up too much time on other tasks that don't fall within those objectives. Note: I originally had one container for both galleries but decided to divide them into two containers in case I wanted to apply different properties to each as part of my learning experience.
-Original Obsolete Code:
+
+
+  
 img {
-  width: 30%;
-  float: left;
-  margin: 1.66%
-}*/
-*{
-    box-sizing: border-box;
-  }
-  
-  img {
-   width: 30%;
-   margin: 1.66%;
-   height: auto;
-  }
-  
-  .container1 {
-    display: flex;
+    /*display: flex;
     flex-wrap: wrap; 
-    flex-direction: row-reverse;
+    flex-direction: row-reverse;*/
     padding: 5px;
     border: 10px solid black;
-     /*Note: I was hoping to use the two commands below to accomplish my main and cross axis spacing but couldn't figure out how. Spacing is accomplished in normal CSS using img and setting margins with percentages to make them more fluid. Apparently that overrides my two commans below. Is there way to use these two commands in the container instead?*/
-    justify-content: space-between;
-    align-content: space-around;
-  }
-  
-  .container2 {
-    display: flex;
-    flex-wrap: wrap; 
-    flex-direction: row-reverse;
-    padding: 5px;
-    border: 10px solid black;
-    justify-content: space-between;
-    align-content: space-around;
+    margin: 50px
+   
    
   }
-  
   
   h2 {
     color: #990000;
@@ -53,6 +27,14 @@ img {
   body {
     background: #DFD8DC;
   }
+
+  .footerContainer {
+    background-color: #9bbc88;
+}
+
+  .headerContainer {
+    background-color: #9bbc88;
+}
   
   
   

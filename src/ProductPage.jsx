@@ -47,8 +47,11 @@ const  ProductPage = (props) => {
       {props.items.map((product, index) => 
       <div key={index} >
         <img src={product.img} style={{width: "200px"}} />
-        <p> {product.name} </p>
-        <p> {product.price} </p>
+        <p> Name: {product.name} </p>
+        <p> Serial#: {product.serialnumber} </p>
+        <p> Price: {product.price} </p>
+        <p> Manufacturer: {product.manufacturer} </p>
+        <p> Category: {product.category} </p>
       </div>  
       )}
     </div>
