@@ -3,7 +3,7 @@ import React from "react";
 function Footer() {
   return (
     <div className="footerContainer">
-      <h1>This is footer</h1>
+      <h1>© Kiwi Photography 2020</h1>
     </div>
   );
 }

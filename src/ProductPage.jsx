@@ -50,9 +50,11 @@ const  ProductPage = (props) => {
         <p> Name: {product.name} </p>
         <p> Serial#: {product.serialnumber} </p>
         <p> Price: {product.price} </p>
+        <p> Quantity: {product.quantity} </p>
         <p> Manufacturer: {product.manufacturer} </p>
         <p> Category: {product.category} </p>
-      </div>  
+      </div> 
+       
       )}
     </div>
   )
