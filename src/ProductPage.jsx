@@ -41,10 +41,10 @@ import React from 'react'
     //<link rel="stylesheet" type="text/css" href="ProductPage.css"
         
 
-const  ProductPage = (props) => {
+const  ProductPage = ({items,setItems}) => {
   return (
     <div>
-      {props.items.map((product, index) => 
+      {items.map((product, index) => 
       <div key={index} >
         <img src={product.img} style={{width: "200px"}} />
         <p> Name: {product.name} </p>
@@ -53,6 +53,7 @@ const  ProductPage = (props) => {
         <p> Quantity: {product.quantity} </p>
         <p> Manufacturer: {product.manufacturer} </p>
         <p> Category: {product.category} </p>
+        <button>Add to Cart</button>
       </div> 
        
       )}
