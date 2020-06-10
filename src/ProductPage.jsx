@@ -56,12 +56,15 @@ const  ProductPage = ({items,setItems,itemsaddedtocart,setItemsaddedtocart}) => 
         <p> Name: {product.name} </p>
         <p> Serial#: {product.serialnumber} </p>
         <p> Price: {product.price} </p>
-        <p> Quantity: {product.quantity} </p>
+        <p> Inventory Quantity: {product.inventoryQuantity} </p>
         <p> Manufacturer: {product.manufacturer} </p>
         <p> Category: {product.category} </p>
         <button onClick={() => {
+         if (product.inventoryQuantity > 0)
           setItemsaddedtocart(itemsaddedtocart.concat(items[index]));
-          console.log(itemsaddedtocart)
+          console.log(itemsaddedtocart);
+          //setItems {items[index](product.inventoryQuantity-1)};//working on this formula to decrease inventory
+          //else {} //Do Nothing - Add Text to say sorry, out of stock
         }}
 >Add to Cart</button>
       </div> 
