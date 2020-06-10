@@ -20,7 +20,7 @@ function App() {
        <Header />
        <Switch>
        
-       <Route exact path="/productpage" render={() => (
+       <Route exact path="/productpage" render={() => ( //We want to render this page with these props
         <ProductPage items = {items} setItems = {setItems} itemsaddedtocart = {itemsaddedtocart} setItemsaddedtocart = {setItemsaddedtocart}/>
        )}>
          
