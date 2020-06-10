@@ -36,14 +36,20 @@
 
 
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 
     //<link rel="stylesheet" type="text/css" href="ProductPage.css"
         
 
-const  ProductPage = ({items,setItems}) => {
+const  ProductPage = ({items,setItems,itemsaddedtocart,setItemsaddedtocart}) => {
   return (
     <div>
+      <Link to='/shoppingcart' id='cartLink'>
+            <button>
+              Shopping Cart
+            </button>
+          </Link>
       {items.map((product, index) => 
       <div key={index} >
         <img src={product.img} style={{width: "200px"}} />
@@ -53,7 +59,11 @@ const  ProductPage = ({items,setItems}) => {
         <p> Quantity: {product.quantity} </p>
         <p> Manufacturer: {product.manufacturer} </p>
         <p> Category: {product.category} </p>
-        <button>Add to Cart</button>
+        <button onClick={() => {
+          setItemsaddedtocart(itemsaddedtocart.concat(items[index]));
+          console.log(itemsaddedtocart)
+        }}
+>Add to Cart</button>
       </div> 
        
       )}

@@ -1,0 +1,24 @@
+#shoppingcartitem {
+
+display:flex;
+justify-content:space-evenly;
+color:black;
+align-items: baseline;
+
+}
+
+.itemdetails {
+
+background-color:#9bbc88;
+
+
+}
+
+#paystuff {
+
+
+margin-left: 60%;
+flex-direction: column; 
+
+
+}

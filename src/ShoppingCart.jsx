@@ -5,10 +5,28 @@
 
 import React from 'react'
 
-export default function ShoppingCart() {
+export default function ShoppingCart({items,setItems,itemsaddedtocart, setItemsaddedtocart}) {
+    console.log(itemsaddedtocart)
     return (
-        <div>
-            I am shopping cart 
+        <div id='shoppingcartcontainer'>
+            <hr/>
+    
+            {itemsaddedtocart.map((item,i)=>{
+                return (
+                    <div id='shoppingcartitem'>
+              <img src={item.img}></img> 
+              <p className='itemdetails'>X {item.cartQuantity}</p>
+              <p className='itemdetails'>{item.price}</p>
+               
+               </div> 
+                )
+            })}
+          
+               <hr/>
+            <div id='paystuff'>
+                <p>Total</p>
+                <button>Pay Now</button>
+            </div>
         </div>
     )
 }

@@ -31,6 +31,8 @@ img {
   .footerContainer {
     background-color: #9bbc88;
     font-style: italic;
+    position: 'fixed';
+    bottom: 0;
 }
 
   .headerContainer {

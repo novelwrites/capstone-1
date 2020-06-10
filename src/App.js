@@ -5,6 +5,7 @@ import './App.css';
 import ProductPage from './ProductPage';
 import ShoppingCart from './ShoppingCart';
 import './ProductPage.css'
+import './ShoppingCart.css'
 import Footer from "./footer";
 import Header from "./header";
 import CartCounter from "./CartCounter.jsx";
@@ -12,6 +13,7 @@ import CartButton from "./CartButton.jsx";
 
 function App() {
   const [ items, setItems ] = useState(data)
+  const [itemsaddedtocart, setItemsaddedtocart]=useState([])  
   return (
     <Router>
     <div className="App">
@@ -19,13 +21,15 @@ function App() {
        <Switch>
        
        <Route exact path="/productpage" render={() => (
-        <ProductPage items = {items} setItems = {setItems}/>
+        <ProductPage items = {items} setItems = {setItems} itemsaddedtocart = {itemsaddedtocart} setItemsaddedtocart = {setItemsaddedtocart}/>
        )}>
          
        </Route>
 
-       <Route exact path="/shoppingcart">
-         <ShoppingCart/>
+       <Route exact path="/shoppingcart" render={() => (
+        <ShoppingCart items = {items} setItems = {setItems} itemsaddedtocart = {itemsaddedtocart} setItemsaddedtocart = {setItemsaddedtocart} />
+       )}>
+    
        </Route>
        </Switch>
        
