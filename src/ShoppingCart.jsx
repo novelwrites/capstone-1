@@ -4,20 +4,26 @@
 //Displays payment method
 
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 export default function ShoppingCart({items,setItems,itemsaddedtocart, setItemsaddedtocart}) {
     console.log(itemsaddedtocart)
     return (
+       
         <div id='shoppingcartcontainer'>
             <hr/>
-    
+            <Link to='/productpage' id='productLink'>
+            <button>
+              Products
+            </button>
+          </Link>
             {itemsaddedtocart.map((item,i)=>{
                 return (
                     <div id='shoppingcartitem'>
               <img src={item.img}></img> 
               <p className='itemdetails'>X {item.cartQuantity}</p>
               <p className='itemdetails'>{item.price}</p>
-               
+              
                </div> 
                 )
             })}
@@ -27,6 +33,7 @@ export default function ShoppingCart({items,setItems,itemsaddedtocart, setItemsa
                 <p>Total</p>
                 <button>Pay Now</button>
             </div>
+            
         </div>
     )
 }
