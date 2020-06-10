@@ -6,7 +6,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 
-export default function ShoppingCart({items,setItems,itemsaddedtocart, setItemsaddedtocart}) {
+export default function ShoppingCart({items,setItems,itemsaddedtocart, setItemsaddedtocart, addTotalCart,setAddTotalCart}) {
     console.log(itemsaddedtocart)
     return (
        
@@ -30,7 +30,7 @@ export default function ShoppingCart({items,setItems,itemsaddedtocart, setItemsa
           
                <hr/>
             <div id='paystuff'>
-                <p>Total</p>
+                <p>Total {addTotalCart}</p>
                 <button>Pay Now</button>
             </div>
             

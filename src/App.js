@@ -13,21 +13,22 @@ import CartButton from "./CartButton.jsx";
 
 function App() {
   const [ items, setItems ] = useState(data)
-  const [itemsaddedtocart, setItemsaddedtocart]=useState([])  
+  const [itemsaddedtocart, setItemsaddedtocart]=useState([]) 
+  const [addTotalCart, setAddTotalCart] = useState(0)
   return (
     <Router>
     <div className="App">
-       <Header />
+       <Header /> 
        <Switch>
        
        <Route exact path="/productpage" render={() => ( //We want to render this page with these props
-        <ProductPage items = {items} setItems = {setItems} itemsaddedtocart = {itemsaddedtocart} setItemsaddedtocart = {setItemsaddedtocart}/>
+        <ProductPage items = {items} setItems = {setItems} itemsaddedtocart = {itemsaddedtocart} setItemsaddedtocart = {setItemsaddedtocart} addTotalCart = {addTotalCart} setAddTotalCart={setAddTotalCart}/>
        )}>
          
        </Route>
 
        <Route exact path="/shoppingcart" render={() => (
-        <ShoppingCart items = {items} setItems = {setItems} itemsaddedtocart = {itemsaddedtocart} setItemsaddedtocart = {setItemsaddedtocart} />
+        <ShoppingCart items = {items} setItems = {setItems} itemsaddedtocart = {itemsaddedtocart} setItemsaddedtocart = {setItemsaddedtocart} addTotalCart = {addTotalCart} setAddTotalCart={setAddTotalCart}/>
        )}>
     
        </Route>

@@ -42,7 +42,7 @@ import { Link } from 'react-router-dom';
     //<link rel="stylesheet" type="text/css" href="ProductPage.css"
         
 
-const  ProductPage = ({items,setItems,itemsaddedtocart,setItemsaddedtocart}) => {
+const  ProductPage = ({items,setItems,itemsaddedtocart,setItemsaddedtocart,addTotalCart,setAddTotalCart}) => {
   function decInventoryQuantity (index){
 const arrayCopy=[...items]//initialized vale of state is the data.js. Creating because resetting the state to be the new value that we will get when we do the operation decrement on inventoryQuantity.
  //behind the scenes rerendering page with the new array which happens every time you do the decrement.
@@ -73,6 +73,7 @@ setItems(arrayCopy)
           decInventoryQuantity (index);
           //setItems (items[index].inventoryQuantity-1);//working on this formula to decrease inventory
           //else {} //Do Nothing - Add Text to say sorry, out of stock
+          setAddTotalCart(addTotalCart+product.price)
          }
          
         }}
