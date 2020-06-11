@@ -8,15 +8,13 @@ import './ProductPage.css'
 import './ShoppingCart.css'
 import Footer from "./footer";
 import Header from "./header";
-import CartCounter from "./CartCounter.jsx";
-import CartButton from "./CartButton.jsx";
 
 function App() {
-  const [ items, setItems ] = useState(data)
+  const [ items, setItems ] = useState(data) //setting up props for productpage.jsx and shopping cart.jsx
   const [itemsaddedtocart, setItemsaddedtocart]=useState([]) 
   const [addTotalCart, setAddTotalCart] = useState(0)
   return (
-    <Router>
+    <Router> {/*Need React Router so we can move between the two views in the DOM*/}
     <div className="App">
        <Header /> 
        <Switch>
@@ -27,7 +25,7 @@ function App() {
          
        </Route>
 
-       <Route exact path="/shoppingcart" render={() => (
+       <Route exact path="/shoppingcart" render={() => ( //We want to render this page with these props
         <ShoppingCart items = {items} setItems = {setItems} itemsaddedtocart = {itemsaddedtocart} setItemsaddedtocart = {setItemsaddedtocart} addTotalCart = {addTotalCart} setAddTotalCart={setAddTotalCart}/>
        )}>
     
