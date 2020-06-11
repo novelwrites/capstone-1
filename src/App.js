@@ -10,7 +10,7 @@ import Footer from "./footer";
 import Header from "./header";
 
 function App() {
-  const [ items, setItems ] = useState(data) //setting up props for productpage.jsx and shopping cart.jsx
+  const [ items, setItems ] = useState(data) //setting up props for productpage.jsx and shoppingcart.jsx
   const [itemsaddedtocart, setItemsaddedtocart]=useState([]) 
   const [addTotalCart, setAddTotalCart] = useState(0)
   return (

@@ -6,7 +6,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function ShoppingCart({
+export default function ShoppingCart({ //props that are available if needed for future development
   items,
   setItems,
   itemsaddedtocart,
@@ -27,7 +27,7 @@ export default function ShoppingCart({
           <div id="shoppingcartitem">
             {" "}
             {/*div id so can use css styling easily*/}
-            <img className="picturedetails" src={item.img}></img>
+            <img className="picturedetails" src={item.img}></img> {/*item values pulled out pf product object*/}
             <p className="itemdetails">X {item.cartQuantity}</p>
             <p className="itemdetails">{item.price}</p>
           </div>
