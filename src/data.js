@@ -30,15 +30,16 @@ const data =
         category: 'country life',
         img: 'http://goldencrossranch.com/capstone1images/breaktime.jpg',
     }, {
+        
         id: 3,
-        name: 'Bridle',
-        serialnumber: '36422',
-        price: 23.95,
+        name: 'True Grit',
+        serialnumber: '34472',
+        price: 44.95,
         inventoryQuantity: 15,
         cartQuantity: 1,
-        manufacturer: 'Kiwi Photography',
+        manufacturer: 'Golden Cross Ranch LLC',
         category: 'country life',
-        img: 'http://goldencrossranch.com/capstone1images/bridle.jpg',
+        img: 'http://goldencrossranch.com/capstone1images/truegrit.jpg',
     }, {
         id: 4,
         name: 'Buckskin Barrel Saddle',
@@ -192,16 +193,6 @@ const data =
         img: 'http://goldencrossranch.com/capstone1images/swcountry.jpg',
     }, {
         id: 19,
-        name: 'True Grit',
-        serialnumber: '34472',
-        price: 44.95,
-        inventoryQuantity: 15,
-        cartQuantity: 1,
-        manufacturer: 'Golden Cross Ranch LLC',
-        category: 'country life',
-        img: 'http://goldencrossranch.com/capstone1images/truegrit.jpg',
-    }, {
-        id: 20,
         name: 'Waiting Patiently',
         serialnumber: '64847',
         price: 39.95,
@@ -210,6 +201,16 @@ const data =
         manufacturer: 'Kiwi Photography',
         category: 'country life',
         img: 'http://goldencrossranch.com/capstone1images/waitingpatiently.jpg',
+    }, {
+        id: 20,
+        name: 'Bridle',
+        serialnumber: '36422',
+        price: 23.95,
+        inventoryQuantity: 15,
+        cartQuantity: 1,
+        manufacturer: 'Kiwi Photography',
+        category: 'country life',
+        img: 'http://goldencrossranch.com/capstone1images/bridle.jpg',
     }, {
         id: 21,
         name: 'Working Cattle',
@@ -226,3 +227,5 @@ const data =
 
 
 export default data; 
+
+        
