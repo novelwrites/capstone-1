@@ -65,6 +65,7 @@ setItems(arrayCopy)
         <p> Inventory Quantity: {product.inventoryQuantity} </p>
         <p> Manufacturer: {product.manufacturer} </p>
         <p> Category: {product.category} </p>
+        <div id='shoppingcartbutton'>
         <button onClick={() => {
          if (product.inventoryQuantity > 0){
 
@@ -78,6 +79,7 @@ setItems(arrayCopy)
          
         }}
 >Add to Cart</button>
+</div>
       </div> 
        
       )}

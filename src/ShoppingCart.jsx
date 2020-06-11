@@ -20,7 +20,7 @@ export default function ShoppingCart({items,setItems,itemsaddedtocart, setItemsa
             {itemsaddedtocart.map((item,i)=>{
                 return (
                     <div id='shoppingcartitem'>
-              <img src={item.img}></img> 
+              <img className='picturedetails'src={item.img}></img> 
               <p className='itemdetails'>X {item.cartQuantity}</p>
               <p className='itemdetails'>{item.price}</p>
               
@@ -30,7 +30,7 @@ export default function ShoppingCart({items,setItems,itemsaddedtocart, setItemsa
           
                <hr/>
             <div id='paystuff'>
-                <p>Total {addTotalCart}</p>
+                <p> Total {addTotalCart}</p>
                 <button>Pay Now</button>
             </div>
             

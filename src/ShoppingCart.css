@@ -3,7 +3,13 @@
 display:flex;
 justify-content:space-evenly;
 color:black;
-align-items: baseline;
+align-items:center
+
+}
+
+#shoppingcartbutton {
+
+background-color:#9bbc88;
 
 }
 
@@ -11,14 +17,19 @@ align-items: baseline;
 
 background-color:#9bbc88;
 
-
 }
+.picturedetails {
+    
+width: 30%;   
+    
+}
+
 
 #paystuff {
 
 
 margin-left: 60%;
 flex-direction: column; 
-
+background-color:#9bbc88;
 
 }
