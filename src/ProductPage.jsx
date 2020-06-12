@@ -41,10 +41,10 @@ setItems(arrayCopy)
           decInventoryQuantity (index);  //Calls the function on line 8 and passes index to function 
           //so it knows which item to decrease the value of
           
-          //else {} //Do Nothing - Add Text to say sorry, out of stock
+         //                       //Do Nothing - Add Text to say sorry, out of stock
           setAddTotalCart(addTotalCart+product.price) //Calculates total of items in cart each time added
          }
-         
+         else {window.alert("Doggone it! We're out of that one!")} 
         }}
 >Add to Cart</button>
 </div>

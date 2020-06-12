@@ -18,7 +18,7 @@ export default function ShoppingCart({ //props that are available if needed for 
   return (
     <div id="shoppingcartcontainer">
       <hr />
-      <Link to="/productpage" id="productLink">
+      <Link to="/" id="productLink"> {/*used / instead of productpage so that route goes to productpage when start npm*/}
         <button>Products</button>
       </Link>
       {itemsaddedtocart.map((item, i) => {
@@ -36,7 +36,7 @@ export default function ShoppingCart({ //props that are available if needed for 
 
       <hr />
       <div id="paystuff">
-        <p> Total {addTotalCart}</p>{" "}
+        <p> Total {addTotalCart.toFixed(2)}</p>{" "}
         {/*Brings in prop from Products Page that calculates Total*/}
         <button>Pay Now</button>
       </div>

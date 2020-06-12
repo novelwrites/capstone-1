@@ -19,7 +19,8 @@ function App() {
        <Header /> 
        <Switch>
        
-       <Route exact path="/productpage" render={() => ( //We want to render this page with these props
+       <Route exact path="/" render={() => ( //We want to render this page with these props
+       //used / instead of productpage so that route goes to productpage when start npm
         <ProductPage items = {items} setItems = {setItems} itemsaddedtocart = {itemsaddedtocart} setItemsaddedtocart = {setItemsaddedtocart} addTotalCart = {addTotalCart} setAddTotalCart={setAddTotalCart}/>
        )}>
          
