@@ -19,8 +19,9 @@ function App() {
     setSearch(item) //Taking the value that is being inputted in the search box from the productpage
     //and setting it to the search variable. Line 19 sets search to whatever is in the search box - defines filter for line 22
 
-  let temp=items.filter (item=>item.category.includes (search)||item.name.includes (search))//filter 
-  //returns category or name - temp is the array that items filter into
+  let temp=data.filter (item=>item.category.includes (search)||item.name.includes (search))//data.filter so that it searches all data
+  //every time - not just what was just filtered 
+  //filter returns category or name - temp is the array that items filter into
   //Doing this function in App.js so we can pass (item) which  will be filtered array for search to product page 
   setItems(temp) //values that were filtered into array -  setItems to temp because items is what is being displayed on the screen
   }

@@ -59,7 +59,7 @@ searchResults(value) //that's the prop that got called in from App.js
           
           setAddTotalCart(addTotalCart+product.price) //Calculates total of items in cart each time added
          }
-         else {window.alert("Doggone it! We're out of that one!")} 
+         else {window.alert("Doggone it! We're out of that one!")} //so cool - window.alert available from browser
         }}
 >Add to Cart</Button>
 
