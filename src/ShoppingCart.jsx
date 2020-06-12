@@ -1,0 +1,47 @@
+//Shopping Cart Page that displays items added to cart from Product Page
+//Along with X Quantity and Price
+//Displays Total Amount
+//Displays Button for Payment Method
+//When Pay Now Button is clicked, items in cart are deleted
+
+import React from "react";
+import { Link } from "react-router-dom";
+import {Button} from 'react-bootstrap';
+
+export default function ShoppingCart({ //props that are available if needed for future development
+  items,
+  setItems,
+  itemsaddedtocart,
+  setItemsaddedtocart,
+  addTotalCart,
+  setAddTotalCart,
+}) {
+  console.log(itemsaddedtocart);
+  return (
+    <div id="shoppingcartcontainer">
+      <hr />
+      <Link to="/" id="productLink"> {/*used / instead of productpage so that route goes to productpage when start npm*/}
+      <Button variant="light">Products</Button>
+      </Link>
+      {itemsaddedtocart.map((item, i) => {
+        //Very cool method to iterate through array of items added to cart and getting properties I want to be displayed
+        return (
+          <div id="shoppingcartitem">
+            {" "}
+            {/*div id so can use css styling easily*/}
+            <img className="picturedetails" src={item.img}></img> {/*item values pulled out of product object*/}
+            <p className="itemdetails">X {item.cartQuantity}</p>
+            <p className="itemdetails">{item.price}</p>
+          </div>
+        );
+      })}
+
+      <hr />
+      <div id="paystuff">
+        <p> Total {addTotalCart.toFixed(2)}</p>{" "}
+        {/*Brings in prop from Products Page that calculates Total*/}
+        <Button variant="light" onClick={()=>setItemsaddedtocart([])}>Pay Now</Button>
+      </div>
+    </div>
+  );
+}
