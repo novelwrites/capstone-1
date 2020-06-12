@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import data from './data'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
+import './style.sass';
 import ProductPage from './ProductPage';
 import ShoppingCart from './ShoppingCart';
 import './ProductPage.css'

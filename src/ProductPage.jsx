@@ -3,7 +3,7 @@
 
 import React from 'react'
 import { Link } from 'react-router-dom';
-
+import {Button} from 'react-bootstrap'
 const  ProductPage = ({items,setItems,itemsaddedtocart,setItemsaddedtocart,addTotalCart,setAddTotalCart}) => {
   function decInventoryQuantity (index){ 
 const arrayCopy=[...items]//initialized value of state is the data.js. Creating because resetting 
@@ -31,7 +31,7 @@ setItems(arrayCopy)
         <p> Manufacturer: {product.manufacturer} </p>
         <p> Category: {product.category} </p>
         <div id='shoppingcartbutton'>
-        <button onClick={() => {    //Inside the map function: Handles mouse click event - Add to Cart Button is clicked
+        <Button variant="outline-success" onClick={() => {    //Inside the map function: Handles mouse click event - Add to Cart Button is clicked
          if (product.inventoryQuantity > 0){ //If statement is satisfied then we will add item to cart
           //and we also decrement inventory by 1 (see function on line 8)
 
@@ -46,7 +46,8 @@ setItems(arrayCopy)
          }
          else {window.alert("Doggone it! We're out of that one!")} 
         }}
->Add to Cart</button>
+>Add to Cart</Button>
+
 </div>
       </div> 
        
