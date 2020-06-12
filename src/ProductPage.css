@@ -1,8 +1,17 @@
 
 .headerContainer {
   background-color: #9bbc88;
+  height: 20rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
   
+#cartButton {
+  margin: .5rem;
+}
+
   
   body {
     background: #DFD8DC;
@@ -27,7 +36,13 @@
     font-style: italic;
     position: 'fixed';
     bottom: 0;
-}
+    height: 100px;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
 
   
   
